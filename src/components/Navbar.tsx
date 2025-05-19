@@ -1,7 +1,11 @@
 'use client';
 import { copyRightIcon, navbarData } from '@/assets';
 
-const Navbar = ({ id }: any) => {
+interface NavbarProps {
+  id: string;
+}
+
+const Navbar = ({ id }: NavbarProps) => {
   return (
     <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-10 xl:py-6 z-10">
       <a href="#home">

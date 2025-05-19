@@ -5,7 +5,7 @@ import Toggle from '@/components/Toggle';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const [id, setId] = useState(0);
+  const [id, setId] = useState('');
   const compsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -14,10 +14,7 @@ export default function Home() {
         entries.forEach((entry) => {
           const intersecting = entry.isIntersecting;
           if (intersecting) {
-            const idNum = Number(entry.target.id);
-            if (!isNaN(idNum)) {
-              setId(idNum);
-            }
+            setId(entry.target.id);
           }
         });
       },
