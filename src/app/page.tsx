@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
   const [id, setId] = useState(0);
-  const compsRef = useRef(null);
+  const compsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
