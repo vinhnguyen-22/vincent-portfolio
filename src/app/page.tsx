@@ -5,8 +5,8 @@ import Toggle from '@/components/Toggle';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const [id, setId] = useState<any>('0');
-  const compsRef = useRef<any>(null);
+  const [id, setId] = useState(0);
+  const compsRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,17 +14,24 @@ export default function Home() {
         entries.forEach((entry) => {
           const intersecting = entry.isIntersecting;
           if (intersecting) {
-            setId(entry.target.id);
+            const idNum = Number(entry.target.id);
+            if (!isNaN(idNum)) {
+              setId(idNum);
+            }
           }
         });
       },
       { threshold: 0.3 }
     );
 
-    const compsArr = Array.from(compsRef.current.children) as Element[];
-    compsArr.forEach((comp: Element) => {
-      observer.observe(comp);
-    });
+    if (compsRef.current) {
+      const compsArr = Array.from(compsRef.current.children);
+      compsArr.forEach((comp) => {
+        if (comp instanceof Element) {
+          observer.observe(comp);
+        }
+      });
+    }
   }, []);
 
   return (

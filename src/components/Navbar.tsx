@@ -1,22 +1,19 @@
 'use client';
 import { copyRightIcon, navbarData } from '@/assets';
-import Link from 'next/link';
 
 const Navbar = ({ id }: { id: string }) => {
   return (
     <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-10 xl:py-6 z-10">
-      <Link href="/#home" passHref legacyBehavior>
-        <a>
-          <span className="text-3xl font-semibold text-red-400">A</span>.
-          <span className="block w-min rotate-90 origin-bottom text-[12px] font-semibold dark:text-white">
-            Nguyen Thanh Vinh (Vincent)
-          </span>
-        </a>
-      </Link>
+      <a href="#home">
+        <span className="text-3xl font-semibold text-red-400">A</span>.
+        <span className="block w-min rotate-90 origin-bottom text-[12px] font-semibold dark:text-white">
+          Nguyen Thanh Vinh (Vincent)
+        </span>
+      </a>
       <div className="flex flex-col gap-y-3 xl:gap-y-1 sm:gap-y-2 ">
         {navbarData.map((item, i) => (
           <a
-            href={`/#${item.id}`}
+            href={`#${item.id}`}
             key={i}
             className="group flex flex-col items-center gap-y-2 "
           >
