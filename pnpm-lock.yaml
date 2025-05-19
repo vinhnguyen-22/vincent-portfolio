@@ -23,6 +23,9 @@ importers:
       reactjs-localstorage:
         specifier: ^1.0.1
         version: 1.0.1
+      remixicon-react:
+        specifier: ^1.0.0
+        version: 1.0.0(react@19.1.0)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -39,6 +42,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.1.5(@types/react@19.1.4)
+      '@types/reactjs-localstorage':
+        specifier: ^1.0.2
+        version: 1.0.2
       eslint:
         specifier: ^9
         version: 9.27.0(jiti@2.4.2)
@@ -456,6 +462,9 @@ packages:
 
   '@types/react@19.1.4':
     resolution: {integrity: sha512-EB1yiiYdvySuIITtD5lhW4yPyJ31RkJkkDw794LaQYrxCSaQV/47y5o1FMC4zF9ZyjUjzJMZwbovEnT5yHTW6g==}
+
+  '@types/reactjs-localstorage@1.0.2':
+    resolution: {integrity: sha512-VMtgsI0cpvd4ZIgdXArIzLnH/uELA0nOintbuHcuTBvLsPBCfrywwkdp+/25ENss2DSWDZz+Ralfns8L/7M9sA==}
 
   '@typescript-eslint/eslint-plugin@8.32.1':
     resolution: {integrity: sha512-6u6Plg9nP/J1GRpe/vcjjabo6Uc5YQPAMxsgQyGC/I0RuukiG1wIe3+Vtg3IrSCVJDmqK3j8adrtzXSENRtFgg==}
@@ -1545,6 +1554,11 @@ packages:
     resolution: {integrity: sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==}
     engines: {node: '>= 0.4'}
 
+  remixicon-react@1.0.0:
+    resolution: {integrity: sha512-KOXlc8EdKdujr2f/2idyFSQRjUB8p0HNiWZYBBzRsTRlTXFuSAFfnGq9culNjhCGmc92Jbtfr9OP0MXWvTMdsQ==}
+    peerDependencies:
+      react: '>=0.14.0'
+
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -2136,6 +2150,8 @@ snapshots:
   '@types/react@19.1.4':
     dependencies:
       csstype: 3.1.3
+
+  '@types/reactjs-localstorage@1.0.2': {}
 
   '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -3391,6 +3407,10 @@ snapshots:
       get-proto: 1.0.1
       gopd: 1.2.0
       set-function-name: 2.0.2
+
+  remixicon-react@1.0.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   resolve-from@4.0.0: {}
 
