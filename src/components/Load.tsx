@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const Load = () => {
@@ -17,7 +18,7 @@ const Load = () => {
       transition={{ duration: 0.5 }}
       className="w-full h-full fixed left-0 top-0 flex items-center justify-center bg-gradient-to-t from-yellow-50 to-red-50 z-50 "
     >
-      <img src="spinner.gif" alt="loader" />
+      <Image src="/spinner.gif" width={100} height={100} alt="loader" />
     </motion.div>
   );
 };

@@ -1,9 +1,14 @@
 'use client';
 import About from '@/components/About';
 import Awards from '@/components/Awards';
+import Contact from '@/components/Contact';
+import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
 import Load from '@/components/Load';
 import Navbar from '@/components/Navbar';
+import Projects from '@/components/Projects';
+import Questions from '@/components/Questions';
+import Skills from '@/components/Skills';
 import Toggle from '@/components/Toggle';
 import { useEffect, useRef, useState } from 'react';
 
@@ -43,11 +48,11 @@ export default function Home() {
           <Hero />
           <About />
           <Awards />
-          {/*<Experience />
+          <Experience />
           <Skills />
           <Projects />
           <Contact />
-          <Questions /> */}
+          <Questions />
         </div>
       </Toggle>
     </>
