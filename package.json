@@ -11,6 +11,7 @@
   "dependencies": {
     "framer-motion": "^12.12.1",
     "next": "15.3.2",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "reactjs-localstorage": "^1.0.1",
@@ -18,14 +19,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/reactjs-localstorage": "^1.0.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.7",
     "typescript": "^5"
   }
 }

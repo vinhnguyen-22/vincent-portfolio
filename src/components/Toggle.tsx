@@ -1,58 +1,41 @@
-'use client';
 import { moonIcon, sunIcon } from '@/assets';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { reactLocalStorage } from 'reactjs-localstorage';
-
-import { ReactNode } from 'react';
 
 const Toggle = ({ children }: { children: ReactNode }) => {
   const [darkTheme, setDarkTheme] = useState(false);
-  const mainRef = useRef<HTMLElement | null>(null);
+  const mainRef = useRef<HTMLElement>(null);
 
   const addDarkTheme = () => {
-    if (mainRef.current) {
-      mainRef.current.classList.add('dark');
-    }
+    if (mainRef.current) mainRef.current.classList.add('dark');
     setDarkTheme(true);
   };
 
   const removeDarkTheme = () => {
-    if (mainRef.current) {
-      mainRef.current.classList.remove('dark');
-    }
+    if (mainRef.current) mainRef.current.classList.remove('dark');
     setDarkTheme(false);
   };
 
   useEffect(() => {
-    const darkTheme = reactLocalStorage.get('darkTheme');
-    let darkThemeParsed = false;
-    if (typeof darkTheme === 'string') {
-      try {
-        darkThemeParsed = JSON.parse(darkTheme);
-      } catch {
-        darkThemeParsed = false;
-      }
-    }
+    if (typeof window === 'undefined') return;
+
+    const stored = reactLocalStorage.get('darkTheme');
+    const parsed = stored !== undefined && JSON.parse(stored.toString());
 
     const systemTheme =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (darkTheme === undefined) {
-      if (systemTheme) {
-        addDarkTheme();
-      } else {
-        removeDarkTheme();
-      }
+    if (stored === undefined) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      systemTheme ? addDarkTheme() : removeDarkTheme();
     } else {
-      if (darkThemeParsed) {
-        addDarkTheme();
-      } else {
-        removeDarkTheme();
-      }
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      parsed ? addDarkTheme() : removeDarkTheme();
     }
-    console.log(darkTheme, darkThemeParsed, systemTheme);
+
+    console.log(stored, parsed, systemTheme);
   }, []);
 
   return (

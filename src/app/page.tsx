@@ -1,4 +1,7 @@
 'use client';
+import About from '@/components/About';
+import Awards from '@/components/Awards';
+import Hero from '@/components/Hero';
 import Load from '@/components/Load';
 import Navbar from '@/components/Navbar';
 import Toggle from '@/components/Toggle';
@@ -36,6 +39,16 @@ export default function Home() {
       <Load />
       <Toggle>
         <Navbar id={id} />
+        <div className="" ref={compsRef}>
+          <Hero />
+          <About />
+          <Awards />
+          {/*<Experience />
+          <Skills />
+          <Projects />
+          <Contact />
+          <Questions /> */}
+        </div>
       </Toggle>
     </>
   );
