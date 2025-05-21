@@ -1,12 +1,12 @@
 'use client';
-import { arrowLeftIcon, experienceData } from '@/assets';
+import { experienceData } from '@/assets';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
-import Heading from './sub/Heading';
+import ArrowLeftSFillIcon from 'remixicon-react/ArrowLeftSFillIcon';
 
 const Experience = () => {
-  //   const date = new Date().getFullYear();
+  // const date = new Date().getFullYear();
 
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -17,82 +17,103 @@ const Experience = () => {
   const scrollY = useSpring(scrollYProgress, { stiffness: 100, damping: 20 });
 
   return (
-    <div id="experience" className="relative py-20 ">
-      <Heading text={'Experience & Education'} />
+    <div id="experience" className="relative min-h-screen py-20">
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-600 dark:text-white transition-colors mb-14 self-start">
+        Experience & Education
+      </h2>
       <Image
-        src={'/education.png'}
-        alt={'Experience image'}
+        src="/education.png"
+        alt="Experience Image"
         width={400}
         height={400}
-        className="absolute -top-4 right-0 opacity-70 lg:hidden"
+        className="absolute xl:block hidden -top-4 right-0 opacity-70"
       />
-
       <div
         ref={containerRef}
-        className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
+        className="w-full relative top-10 h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
       >
-        {experienceData.map((data, i) => (
-          <div
-            key={'id-${i}'}
-            className={`w-[600px] xl:w-[480px] sm:w-full px-12 sm:px-0 relative ${
-              i % 2 === 0
-                ? '-left-[300px] xl:-left-[240px] lg:-left-0'
-                : 'left-[300px] xl:left-[240px] lg:left-0'
-            }`}
-          >
-            <motion.div
-              initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, type: 'spring', stiffness: 50 }}
-              className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm dark:bg-zinc-700 transition-colors z-20"
-            >
-              <h1 className="text-xl sm:text-lg font-semibold text-gray-700 dark:text-white transition-colors">
-                {data.title}
-              </h1>
-              <p className="text-gray-800 dark:text-gray-100 transition-colors">
-                <span className="block font-bold">Institution: </span>
-                <span className="block pl-2 font-extralight">
-                  {data.institution}
-                </span>
-              </p>
-              <div className="text-gray-800 dark:text-gray-200 transition-colors">
-                <span className="font-bold">Experience: </span>
-                <ul className="pl-5 list-disc">
-                  {data.experience.map((exp, j) => (
-                    <li key={j} className="my-1 font-extralight">
-                      {exp}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <span
-                className={`absolute top-20  text-red-300 -translate-y-1/2 lg:hidden ${
-                  i % 2 === 0 ? 'left-full rotate-180' : 'right-full'
-                }`}
-              >
-                {arrowLeftIcon}
-              </span>
-            </motion.div>
-            <div
-              className={`w-14 h-14 absolute top-20 border border-gray-300 rounded-full grid place-items-center text-red-400 font-light -translate-y-1/2 z-10 bg-white ${
-                i % 2 === 0
-                  ? 'left-full -translate-x-1/2 lg:left-1/2'
-                  : 'right-full translate-x-1/2 lg:right-1/2'
-              }`}
-            >
-              <span className="text-sm leading-tight text-center">
-                {data.year}
-              </span>
-            </div>
-          </div>
-        ))}
-
         <motion.div
           initial={{ scaleY: 0 }}
           style={{ scaleY: scrollY }}
-          className="absolute w-1 h-full rounded-full bg-gray-400 origin-top "
+          className="absolute w-1 h-full rounded-full bg-gray-300 origin-top"
         ></motion.div>
+        {experienceData.map((e, i) => {
+          if (i % 2 === 0) {
+            return (
+              <div
+                key={i}
+                className="w-full z-10 xl:mr-[6.5rem] md:w-[480px] relative lg:left-0 xl:-left-[240px]"
+              >
+                <motion.div
+                  initial={{ opacity: 0, x: 80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, type: 'spring', stiffness: 50 }}
+                  className="flex relative flex-col gap-y-3 border-solid border-[1px] rounded-md border-red-300 dark:bg-zinc-700 transition-colors bg-white p-4 tracking-wide sm:text-sm"
+                >
+                  <p className="text-xl sm:text-lg font-light text-gray-700 dark:text-white transition-colors">
+                    {e.title}
+                  </p>
+                  <p className="text-gray-800 dark:text-gray-100 transition-colors">
+                    <span className="block font-semibold">Institution</span>
+                    <span className="block pl-2 font-extralight">
+                      {e.institution}
+                    </span>
+                  </p>
+                  <div className="text-gray-800 dark:text-gray-200 transition-colors">
+                    <p className="font-semibold">Experience</p>
+                    <ul className="pl-2">
+                      <li className="my-1 font-extralight">{e.experience}</li>
+                    </ul>
+                  </div>
+                  <p className="absolute hidden xl:block top-14 rotate-180 left-full text-red-300">
+                    <ArrowLeftSFillIcon />
+                  </p>
+                </motion.div>
+                <div className="absolute hidden top-10 z-10 bg-white -right-20 w-14 border border-gray-300 rounded-full aspect-square xl:grid justify-center items-center text-red-400 font-semibold text-[10px] text-center">
+                  {e.year}
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <div
+                key={i}
+                className="xl:ml-[6.5rem] z-10 md:w-[480px] w-full relative xl:left-[240px] lg:left-0"
+              >
+                <motion.div
+                  initial={{ opacity: 0, x: -80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, type: 'spring', stiffness: 50 }}
+                  className="flex relative flex-col gap-y-3 border-solid border-[1px] rounded-md dark:bg-zinc-700 transition-colors border-red-300 bg-white p-4 tracking-wide sm:text-sm"
+                >
+                  <p className="text-xl sm:text-lg font-light text-gray-700 dark:text-white transition-colors">
+                    {e.title}
+                  </p>
+                  <p className="text-gray-800 dark:text-gray-100 transition-colors">
+                    <span className="block font-semibold">Institution</span>
+                    <span className="block pl-2 font-extralight">
+                      {e.institution}
+                    </span>
+                  </p>
+                  <div className="text-gray-800 dark:text-gray-200 transition-colors">
+                    <p className="font-bold">Experience</p>
+                    <ul className="pl-2">
+                      <li className="my-1 font-extralight">{e.experience}</li>
+                    </ul>
+                  </div>
+                  <p className="absolute hidden xl:block top-14 right-full text-red-300">
+                    <ArrowLeftSFillIcon />
+                  </p>
+                </motion.div>
+                <div className="absolute top-10 z-10 bg-white -left-20 w-14 border border-gray-300 rounded-full aspect-square hidden  xl:grid justify-center items-center text-red-400 font-semibold text-[10px] text-center">
+                  {e.year}
+                </div>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

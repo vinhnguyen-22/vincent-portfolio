@@ -30,7 +30,6 @@ import MoonFoggyFillIcon from 'remixicon-react/MoonFoggyFillIcon';
 import StarFillIcon from 'remixicon-react/StarFillIcon';
 import StarHalfLineIcon from 'remixicon-react/StarHalfLineIcon';
 import SunFoggyFillIcon from 'remixicon-react/SunFoggyFillIcon';
-
 const icons = [
   // { component: <DribbbleLineIcon />, key: 'dribbble' },
   { component: <GithubLineIcon />, key: 'github' },
@@ -66,8 +65,7 @@ export const downloadIcon = <DownloadLineIcon />;
 export const arrowLeftIcon = <ArrowLeftSFillIcon />;
 
 export const aboutText =
-  " Hi, I’m an enthusiastic recent graduate with a Bachelor's degree in Computer Science and Engineering. I enjoy working with Python and Java, and I specialize in developing web applications using Django. I am also passionate about learning the latest advancements in AI. Throughout my academic journey, I have cultivated strong discipline, punctuality, and a commitment to hard work. I've developed the ability to perform well under pressure and consistently prioritize quality over quantity. I thrive in environments that challenge me and allow me to demonstrate my skills through competitive assessments.";
-// End of AboutMe icons
+  'Dedicated data professional with a strong foundation in Python programming and quantitative analysis. Proven understanding of financial markets through direct experience in brokerage, with a focus on trading strategies and technical analysis. Skilled in processing time-series data, designing scalable ETL pipelines, and applying statistical methods to extract actionable insights from large and complex datasets. Proficient in core libraries such as Pandas, NumPy, and SciPy, as well as in relational databases and performance-optimized data workflows. Capable of developing production-grade modules, quantitative indicators, and backtesting frameworks aligned with rigorous financial logic. Committed to delivering reliable, maintainable, and scalable data solutions in dynamic and high-performance environments.';
 
 // awards
 
@@ -127,23 +125,23 @@ export const skillsData = [
     name: 'Python',
     icon: '/skills/Python.png',
   },
-  {
-    name: 'Go',
-    icon: '/skills/Go.png',
-  },
-  {
-    name: 'Django',
-    icon: '/skills/Django.png',
-  },
+  // {
+  //   name: 'Go',
+  //   icon: '/skills/Go.png',
+  // },
+  // {
+  //   name: 'Django',
+  //   icon: '/skills/Django.png',
+  // },
   {
     name: 'AI',
     icon: '/skills/ai.png',
   },
 
-  {
-    name: 'TensorFlow',
-    icon: '/skills/TensorFlow.png',
-  },
+  // {
+  //   name: 'TensorFlow',
+  //   icon: '/skills/TensorFlow.png',
+  // },
 
   {
     name: 'Oracle',
@@ -157,10 +155,10 @@ export const skillsData = [
     name: 'Firebase',
     icon: '/skills/Firebase.png',
   },
-  {
-    name: 'Hadoop',
-    icon: '/skills/Hadoop.png',
-  },
+  // {
+  //   name: 'Hadoop',
+  //   icon: '/skills/Hadoop.png',
+  // },
   {
     name: 'HTML',
     icon: '/skills/html.png',
@@ -210,117 +208,102 @@ export const copyRightIcon = <CopyrightLineIcon />;
 // Experience
 export const experienceData = [
   {
-    year: '2025.4 - Present',
-    title: 'Associate Data Analyst',
-    institution: ['Augmedix Bangladesh | Commure'],
+    year: '2025.3 - Present',
+    title: 'Data Analyst Specialist',
+    institution: ['Saigon Co.op'],
     experience: [
-      'Perform quality assurance checks on high-volume operational data to ensure accuracy and flag inconsistencies across workflows.',
-      'Use SQL and Python to analyze data sets and support quality-related decision-making by identifying patterns, discrepancies, and areas for improvement.',
-      'Build and maintain internal Retool apps to streamline manual QA tasks, validate data inputs, and support cross-functional teams.',
-      'Create and maintain process documentation and SOPs, ensuring instructions are clear, accurate, and easy for internal teams to follow.',
-      'Work with Product, Engineering, and other operational teams to report issues, test fixes, and verify that changes meet quality standards.',
-      'Use Excel tools for data audits and regular quality checks on submission workflows.',
-      'Technologies Used: SQL, Python, Retool, Javascript, Excel, G-Sheet, Jira',
-    ],
-  },
-
-  {
-    year: '2025.1\n-\n2025.3',
-    title: 'Operations Analyst - Submission Integrity QA',
-    institution: ['Augmedix Bangladesh | Commure'],
-    experience: [
-      'Analyze large datasets using SQL and other tools to spot inconsistencies, improve workflows, and support business decisions.',
-      'Break down complex technical concepts into simple, easy-to-understand documentation.',
-      'Conduct quality assurance checks on operational processes to ensure data accuracy and minimize errors.',
-      'Maintain and update process documentation, making sure everything is clear and up-to-date.',
-      'Work closely with Product, Engineering, Sales, and Account Management teams to maintain quality standards and troubleshoot issues.',
-      'Technologies Used: SQL, Python, Retool, Javascript, Excel, Jira, Confluence, Git.',
-    ],
-  },
-
-  {
-    year: '2024.6\n-\n2024.12',
-    title: 'Trainee',
-    institution: ["Bangladesh Japan ICT Engineers' Training Program (BJET)"],
-    experience: [
-      'Learning Japanese Language, Culture, Business Manner and IT skills.',
-      'Developed a Learning Management System as part of the IT project of BJET.',
-      'Technologies Used: Shadcn, Tailwind, ReactJS, NodeJS, MongoDB',
-    ],
-  },
-
-  {
-    year: '2022.2\n-\n2025.1',
-    title: 'Undergraduate and Graduate Teaching Assistant',
-    institution: ['East West University'],
-    experience: [
-      'Courses Assisted: Object Oriented Programming, Algorithms, Database Systems, Artificial Intelligence, Software Engineering, Information System Analysis and Design.',
-      'Tutored students individually and in groups to help them grasp difficult concepts and project work. Evaluated assignments and lab tests and gave detailed feedback.',
-      'Technologies Used: C++, Java, Python, Django, Oracle DB, MySQL, SQLite, HTML, CSS (Bootstrap), Javascript',
+      'Built automated pipelines to clean, transform, and analyze retail sales and inventory data.',
+      'Developed ML models to segment customers and forecast product demand.',
+      'Collaborated with teams to create Power BI dashboards for key performance indicators (KPIs).',
+      'Streamlined reporting tasks using Excel, Power Query, and Google Sheets.',
+      'Worked cross-functionally to support data-driven decisions across marketing and logistics teams.',
+      'Technologies Used: Python, SQL, Power BI, Excel, Power Query, Google Sheets',
     ],
   },
   {
-    year: '2020.1\n-\n2024.2',
-    title: 'Graduation with a Computer Science and Engineering Degree',
-    institution: ['East West University'],
+    year: '2023.12 - 2024.12',
+    title: 'Stockbroker',
+    institution: ['VNDIRECT Securities Corporation'],
     experience: [
-      'CGPA: 3.88 / 4',
-      'Participated in many programming contests and project showcasing.',
-      'Worked on different academic as well as personal projects that are shown below.',
+      'Provided clients with market insights and investment recommendations based on technical and fundamental analysis.',
+      'Executed equity transactions and managed individual portfolios.',
+      'Supported onboarding of new clients and guided them through financial literacy.',
+      'Helped investors identify undervalued assets and trading strategies.',
+      'Technologies Used: TradingView, Excel, Stock Analysis Tools',
+    ],
+  },
+  {
+    year: '2023.12 - 2024.12',
+    title: 'Freelance Software Engineer',
+    institution: ['Self-employed'],
+    experience: [
+      'Built custom web scraping and data automation tools for small business clients.',
+      'Developed REST APIs and backend modules for inventory and pricing systems.',
+      'Created automation scripts using Google Apps Script and VBA to reduce manual work.',
+      'Delivered tailored solutions for reporting, analytics, and data extraction.',
+      'Technologies Used: Python, JavaScript, FastAPI, Google Apps Script, VBA, SQL',
+    ],
+  },
+  {
+    year: '2020.10 - 2024.12',
+    title: 'Bachelor’s Degree in Finance and Banking',
+    institution: ['Ton Duc Thang University'],
+    experience: [
+      'GPA: 8.2 / 10.0',
+      'Acquired solid foundation in investment, financial modeling, and market operations.',
+      'Engaged in data-related extracurricular projects and finance case studies.',
+    ],
+  },
+  {
+    year: '2020.10 - 2023.6',
+    title: 'Advanced Diploma in Software Engineering',
+    institution: ['Aptech Computer Education'],
+    experience: [
+      'Trained in full-stack development, database systems, and algorithm design.',
+      'Completed several capstone projects including inventory systems and internal tools.',
+      'Practiced version control, clean coding practices, and agile workflows.',
+      'Technologies Used: C++, Java, ReactJS, NodeJS, MongoDB, SQL',
     ],
   },
 ];
 
 export const projectsData = [
   {
-    name: 'Face Attedance System',
+    name: 'Real-time Stock Market Dashboard',
     desc: 'This system uses Google MediaPipe to scan and identify registered users’ faces for automatic attendance, showing “already taken” if recorded for the day.”',
     img: '/projects/FaceAttendance.gif',
-    tech: ['Figma', 'ML', 'Python'],
-    url: 'https://github.com/abdullah-al-tamim/Facial-Recognition-with-Real-Time-Database',
+    tech: ['Quantitative', 'Finance', 'Python', 'Streamlit'],
+    url: 'https://github.com/vinhnguyen-22/Vincent-Stock-Dashboard',
+    demo: 'https://vincent-stock-dashboard-dwq9j2rsb8p54bznvwp3jt.streamlit.app/',
   },
-  {
-    name: 'Decoding Object Shapes from EEG Signals of the Brain ',
-    desc: 'This project uses brain signals to classify object shapes by touch. It converts signals to images for Deep Learning methods. A YOLOv8 and Random Forest ensemble achieved 94% test accuracy.',
-    img: '/projects/EEG.gif',
-    tech: ['Python', 'ML'],
-    url: 'https://github.com/abdullah-al-tamim/Capstone',
-  },
-  {
-    name: 'Online Railway Ticket Reservation System',
-    desc: 'This project automates railway e-ticketing, enabling seat selection, payments, instant e-ticket delivery, user journey tracking, and admin management of train schedules and stoppages.',
-    img: '/projects/RTRS.gif',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Django'],
-    url: 'https://github.com/abdullah-al-tamim/Online-Railway-Ticket-Reservation-System',
-  },
-  {
-    name: 'WanderLuxeTravels.co',
-    desc: 'A travel website that provides luxury travel guides, destination reviews, and tips for planning unforgettable vacations.',
-    img: '/projects/image-4.jpg',
-    tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
-    url: 'ff',
-  },
-  {
-    name: 'ByteBoosters.io',
-    desc: 'A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.',
-    img: '/projects/image-5.jpg',
-    tech: ['Figma', 'ReactJS', 'TailwindCSS', 'CSS'],
-    url: 'ff',
-  },
-];
-
-export const projectsButton = [
-  'All',
-  'ML',
-  'Python',
-  'Django',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'ReactJS',
-  'TailwindCSS',
-  'NextJS',
-  'FramerMotion',
+  // {
+  //   name: 'Decoding Object Shapes from EEG Signals of the Brain ',
+  //   desc: 'This project uses brain signals to classify object shapes by touch. It converts signals to images for Deep Learning methods. A YOLOv8 and Random Forest ensemble achieved 94% test accuracy.',
+  //   img: '/projects/EEG.gif',
+  //   tech: ['Python', 'ML'],
+  //   url: 'https://github.com/abdullah-al-tamim/Capstone',
+  // },
+  // {
+  //   name: 'Online Railway Ticket Reservation System',
+  //   desc: 'This project automates railway e-ticketing, enabling seat selection, payments, instant e-ticket delivery, user journey tracking, and admin management of train schedules and stoppages.',
+  //   img: '/projects/RTRS.gif',
+  //   tech: ['HTML', 'CSS', 'JavaScript', 'Django'],
+  //   url: 'https://github.com/abdullah-al-tamim/Online-Railway-Ticket-Reservation-System',
+  // },
+  // {
+  //   name: 'WanderLuxeTravels.co',
+  //   desc: 'A travel website that provides luxury travel guides, destination reviews, and tips for planning unforgettable vacations.',
+  //   img: '/projects/image-4.jpg',
+  //   tech: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
+  //   url: 'ff',
+  // },
+  // {
+  //   name: 'ByteBoosters.io',
+  //   desc: 'A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.',
+  //   img: '/projects/image-5.jpg',
+  //   tech: ['Figma', 'ReactJS', 'TailwindCSS', 'CSS'],
+  //   url: 'ff',
+  // },
 ];
 
 export const navbarData = [

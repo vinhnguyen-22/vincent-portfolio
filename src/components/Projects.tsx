@@ -1,6 +1,6 @@
 'use client';
 
-import { projectsButton, projectsData } from '@/assets';
+import { projectsData } from '@/assets';
 import { animate, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Heading from './sub/Heading';
@@ -27,6 +27,10 @@ const Projects = () => {
     handleClick();
     prevIndex.current = index;
   }, [index]);
+
+  const projectsButton = Array.from(
+    new Set(projectsData.flatMap((project) => project.tech))
+  );
 
   return (
     <div id="projects" className="min-h-screen py-20 ">
