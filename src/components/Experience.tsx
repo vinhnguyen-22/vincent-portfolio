@@ -62,8 +62,12 @@ const Experience = () => {
                   </p>
                   <div className="text-gray-800 dark:text-gray-200 transition-colors">
                     <p className="font-semibold">Experience</p>
-                    <ul className="pl-2">
-                      <li className="my-1 font-extralight">{e.experience}</li>
+                    <ul className="pl-5 list-disc">
+                      {e.experience.map((exp, j) => (
+                        <li key={j} className="my-1 font-extralight">
+                          {exp}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <p className="absolute hidden xl:block top-14 rotate-180 left-full text-red-300">
@@ -99,9 +103,11 @@ const Experience = () => {
                   </p>
                   <div className="text-gray-800 dark:text-gray-200 transition-colors">
                     <p className="font-bold">Experience</p>
-                    <ul className="pl-2">
-                      <li className="my-1 font-extralight">{e.experience}</li>
-                    </ul>
+                    {e.experience.map((exp, j) => (
+                      <li key={j} className="my-1 font-extralight">
+                        {exp}
+                      </li>
+                    ))}
                   </div>
                   <p className="absolute hidden xl:block top-14 right-full text-red-300">
                     <ArrowLeftSFillIcon />

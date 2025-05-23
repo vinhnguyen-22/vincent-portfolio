@@ -18,7 +18,6 @@ import DownloadLineIcon from 'remixicon-react/DownloadLineIcon';
 import HistoryLineIcon from 'remixicon-react/HistoryLineIcon';
 import Home5LineIcon from 'remixicon-react/Home5LineIcon';
 import ProjectorLineIcon from 'remixicon-react/ProjectorLineIcon';
-import QuestionAnswerLineIcon from 'remixicon-react/QuestionAnswerLineIcon';
 import UserLineIcon from 'remixicon-react/UserLineIcon';
 import UserStarLineIcon from 'remixicon-react/UserStarLineIcon';
 
@@ -347,11 +346,11 @@ export const navbarData = [
     name: 'Contact',
     icon: <ContactsBook2LineIcon />,
   },
-  {
-    id: 'questions',
-    name: 'Questions',
-    icon: <QuestionAnswerLineIcon />,
-  },
+  // {
+  //   id: 'questions',
+  //   name: 'Questions',
+  //   icon: <QuestionAnswerLineIcon />,
+  // },
 ];
 
 export const questions = [

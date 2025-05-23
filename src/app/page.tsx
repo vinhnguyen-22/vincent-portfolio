@@ -8,7 +8,6 @@ import Load from '@/components/Load';
 import Navbar from '@/components/Navbar';
 // import NavBar from '@/components/NavBar';
 import Projects from '@/components/Projects';
-import Questions from '@/components/Questions';
 // import Reviews from '@/components/Reviews';
 import Skills from '@/components/Skills';
 import Toggle from '@/components/Toggle';
@@ -106,7 +105,7 @@ export default function Home() {
           {/* <Reviews /> */}
           <Projects />
           <Contact />
-          <Questions />
+          {/* <Questions /> */}
         </div>
       </Toggle>
     </main>
